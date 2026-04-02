@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stonewild Prototype</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; font-family: system-ui, sans-serif; background: #000; }
+      #overlay { position: fixed; inset: 0; pointer-events: none; color: #fff; }
+      #crosshair { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28px; opacity: 0.9; }
+      #hud { position: absolute; left: 14px; top: 12px; background: rgba(0,0,0,0.4); padding: 8px 10px; border-radius: 8px; font-size: 13px; line-height: 1.4; }
+      #hotbar { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; gap: 8px; }
+      .slot { width: 64px; border: 2px solid #7a7a7a; background: rgba(20,20,20,0.7); padding: 4px; border-radius: 8px; text-align: center; }
+      .slot.active { border-color: #ffd447; }
+      .slot .name { font-size: 10px; opacity: 0.85; }
+      .slot .count { font-size: 16px; font-weight: 700; }
+      #crafting { position: absolute; right: 14px; top: 12px; width: 220px; background: rgba(0,0,0,0.45); padding: 10px; border-radius: 8px; pointer-events: auto; }
+      #crafting button { width: 100%; margin: 4px 0; background: #335; color: #fff; border: 1px solid #667; border-radius: 6px; padding: 6px 8px; cursor: pointer; }
+      #message { position: absolute; left: 50%; top: 15%; transform: translateX(-50%); background: rgba(0,0,0,0.5); padding: 8px 14px; border-radius: 8px; font-weight: 700; }
+      #clickToPlay { position: fixed; inset: 0; display: grid; place-content: center; color: #fff; background: radial-gradient(circle at center, rgba(10,10,35,0.25), rgba(0,0,0,0.85)); pointer-events: auto; }
+      #clickToPlay button { margin-top: 8px; font-size: 16px; padding: 10px 14px; background: #445; color: #fff; border: 1px solid #778; border-radius: 6px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="crosshair">+</div>
+      <div id="hud"></div>
+      <div id="hotbar"></div>
+      <div id="crafting"></div>
+      <div id="message"></div>
+      <div id="clickToPlay">
+        <div>
+          <h2>Stonewild: Prototype</h2>
+          <p>WASD move, Space jump, Shift sprint, Left break, Right place, 1-5 hotbar.</p>
+          <button id="playBtn">Click to Play</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
