@@ -1,0 +1,14 @@
+{
+  "name": "voxel-game",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "three": "^0.179.1"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}
